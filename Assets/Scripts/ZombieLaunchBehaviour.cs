@@ -45,9 +45,15 @@ public class ZombieLaunchBehaviour : MonoBehaviour
         {
             return;
         }
-        Vector3 mouseScreenPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-        _mouseWorldPosition = _mainCamera.ScreenToWorldPoint(mouseScreenPos);
-        _mouseWorldPosition.z = 0;
+        Vector3 mouseScreenPos = Input.mousePosition;
+        Ray ray = _mainCamera.ScreenPointToRay(mouseScreenPos);
+        if (Physics.Raycast(ray, out RaycastHit hitData))
+        {
+            _mouseWorldPosition = hitData.point;
+        }
+
+        Debug.DrawRay(transform.position, _mouseWorldPosition);
+
 
         if (Input.GetMouseButtonDown(0))
         {
