@@ -7246,10 +7246,10 @@ HingeJoint:
     targetVelocity: 150
     force: 150
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
-    min: 0
-    max: 0
+    min: -35.61779
+    max: 56.978874
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
