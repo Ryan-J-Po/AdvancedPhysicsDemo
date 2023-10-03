@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 5909227}
   - component: {fileID: 5909226}
   - component: {fileID: 5909225}
+  - component: {fileID: 5909229}
   m_Layer: 0
   m_Name: PachinkoPlatform (29)
   m_TagString: Untagged
@@ -218,8 +219,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5909229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5909224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &10344675
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +247,7 @@ GameObject:
   - component: {fileID: 10344678}
   - component: {fileID: 10344677}
   - component: {fileID: 10344676}
+  - component: {fileID: 10344680}
   m_Layer: 0
   m_Name: PachinkoPlatform (5)
   m_TagString: Untagged
@@ -315,8 +331,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &10344680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10344675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &39099227 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100224, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
@@ -334,7 +364,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.23377718, y: 0.00001719824, z: 0.000011745219}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -398,6 +428,120 @@ CapsuleCollider:
   m_Height: 0.3093683
   m_Direction: 0
   m_Center: {x: -0.15468416, y: 0, z: 0}
+--- !u!1 &48286784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 48286789}
+  - component: {fileID: 48286788}
+  - component: {fileID: 48286787}
+  - component: {fileID: 48286786}
+  - component: {fileID: 48286785}
+  m_Layer: 0
+  m_Name: InvisibleRoof
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &48286785
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48286784}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &48286786
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48286784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &48286787
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48286784}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4346645ae760f0841a3acdc41e4d3e22, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &48286788
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48286784}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &48286789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48286784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 20.27, z: 0}
+  m_LocalScale: {x: 20, y: 0.5, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &76144128
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +554,7 @@ GameObject:
   - component: {fileID: 76144131}
   - component: {fileID: 76144130}
   - component: {fileID: 76144129}
+  - component: {fileID: 76144133}
   m_Layer: 0
   m_Name: PachinkoPlatform (11)
   m_TagString: Untagged
@@ -493,8 +638,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &76144133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76144128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &84920658
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +666,7 @@ GameObject:
   - component: {fileID: 84920661}
   - component: {fileID: 84920660}
   - component: {fileID: 84920659}
+  - component: {fileID: 84920663}
   m_Layer: 0
   m_Name: PachinkoPlatform (39)
   m_TagString: Untagged
@@ -590,8 +750,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84920663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84920658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &89266219
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +778,7 @@ GameObject:
   - component: {fileID: 89266222}
   - component: {fileID: 89266221}
   - component: {fileID: 89266220}
+  - component: {fileID: 89266224}
   m_Layer: 0
   m_Name: PachinkoPlatform (32)
   m_TagString: Untagged
@@ -687,8 +862,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &89266224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89266219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &116875596
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,6 +890,7 @@ GameObject:
   - component: {fileID: 116875599}
   - component: {fileID: 116875598}
   - component: {fileID: 116875597}
+  - component: {fileID: 116875601}
   m_Layer: 0
   m_Name: PachinkoPlatform (3)
   m_TagString: Untagged
@@ -784,8 +974,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &116875601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116875596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &240185863
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,6 +1002,7 @@ GameObject:
   - component: {fileID: 240185866}
   - component: {fileID: 240185865}
   - component: {fileID: 240185864}
+  - component: {fileID: 240185868}
   m_Layer: 0
   m_Name: PachinkoPlatform (40)
   m_TagString: Untagged
@@ -881,8 +1086,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240185868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240185863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &256586178
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +1114,7 @@ GameObject:
   - component: {fileID: 256586181}
   - component: {fileID: 256586180}
   - component: {fileID: 256586179}
+  - component: {fileID: 256586183}
   m_Layer: 0
   m_Name: PachinkoPlatform (47)
   m_TagString: Untagged
@@ -978,8 +1198,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256586183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256586178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &257696208
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1226,7 @@ GameObject:
   - component: {fileID: 257696211}
   - component: {fileID: 257696210}
   - component: {fileID: 257696209}
+  - component: {fileID: 257696213}
   m_Layer: 0
   m_Name: PachinkoPlatform (4)
   m_TagString: Untagged
@@ -1075,8 +1310,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257696213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257696208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &269048197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1338,7 @@ GameObject:
   - component: {fileID: 269048200}
   - component: {fileID: 269048199}
   - component: {fileID: 269048198}
+  - component: {fileID: 269048202}
   m_Layer: 0
   m_Name: PachinkoPlatform (50)
   m_TagString: Untagged
@@ -1172,8 +1422,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 57
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &269048202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269048197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &271843821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1450,7 @@ GameObject:
   - component: {fileID: 271843824}
   - component: {fileID: 271843823}
   - component: {fileID: 271843822}
+  - component: {fileID: 271843826}
   m_Layer: 0
   m_Name: PachinkoPlatform (15)
   m_TagString: Untagged
@@ -1269,8 +1534,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &271843826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271843821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &280129367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,6 +1562,7 @@ GameObject:
   - component: {fileID: 280129370}
   - component: {fileID: 280129369}
   - component: {fileID: 280129368}
+  - component: {fileID: 280129372}
   m_Layer: 0
   m_Name: PachinkoPlatform (33)
   m_TagString: Untagged
@@ -1366,8 +1646,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &280129372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280129367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &342091505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,6 +1674,7 @@ GameObject:
   - component: {fileID: 342091508}
   - component: {fileID: 342091507}
   - component: {fileID: 342091506}
+  - component: {fileID: 342091510}
   m_Layer: 0
   m_Name: PachinkoPlatform (43)
   m_TagString: Untagged
@@ -1463,8 +1758,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342091510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342091505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &436050106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,6 +1786,7 @@ GameObject:
   - component: {fileID: 436050109}
   - component: {fileID: 436050108}
   - component: {fileID: 436050107}
+  - component: {fileID: 436050111}
   m_Layer: 0
   m_Name: PachinkoPlatform (24)
   m_TagString: Untagged
@@ -1560,8 +1870,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &436050111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436050106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &465581230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1898,7 @@ GameObject:
   - component: {fileID: 465581233}
   - component: {fileID: 465581232}
   - component: {fileID: 465581231}
+  - component: {fileID: 465581235}
   m_Layer: 0
   m_Name: PachinkoPlatform (31)
   m_TagString: Untagged
@@ -1657,8 +1982,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &465581235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465581230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &468724200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,6 +2010,7 @@ GameObject:
   - component: {fileID: 468724203}
   - component: {fileID: 468724202}
   - component: {fileID: 468724201}
+  - component: {fileID: 468724205}
   m_Layer: 0
   m_Name: PachinkoPlatform (13)
   m_TagString: Untagged
@@ -1754,8 +2094,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &468724205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468724200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &476997176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,6 +2122,7 @@ GameObject:
   - component: {fileID: 476997179}
   - component: {fileID: 476997178}
   - component: {fileID: 476997177}
+  - component: {fileID: 476997181}
   m_Layer: 0
   m_Name: PachinkoPlatform (21)
   m_TagString: Untagged
@@ -1851,8 +2206,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &476997181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476997176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &522480894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,6 +2234,7 @@ GameObject:
   - component: {fileID: 522480897}
   - component: {fileID: 522480896}
   - component: {fileID: 522480895}
+  - component: {fileID: 522480899}
   m_Layer: 0
   m_Name: PachinkoPlatform (7)
   m_TagString: Untagged
@@ -1948,8 +2318,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &522480899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522480894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &670453866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,6 +2346,7 @@ GameObject:
   - component: {fileID: 670453869}
   - component: {fileID: 670453868}
   - component: {fileID: 670453867}
+  - component: {fileID: 670453871}
   m_Layer: 0
   m_Name: PachinkoPlatform (36)
   m_TagString: Untagged
@@ -2045,8 +2430,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &670453871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670453866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &670767103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,6 +2458,7 @@ GameObject:
   - component: {fileID: 670767106}
   - component: {fileID: 670767105}
   - component: {fileID: 670767104}
+  - component: {fileID: 670767108}
   m_Layer: 0
   m_Name: PachinkoPlatform (1)
   m_TagString: Untagged
@@ -2142,8 +2542,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &670767108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670767103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,6 +2664,7 @@ GameObject:
   - component: {fileID: 709785257}
   - component: {fileID: 709785256}
   - component: {fileID: 709785255}
+  - component: {fileID: 709785259}
   m_Layer: 0
   m_Name: PachinkoPlatform (25)
   m_TagString: Untagged
@@ -2333,8 +2748,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &709785259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709785254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &720077953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2776,7 @@ GameObject:
   - component: {fileID: 720077956}
   - component: {fileID: 720077955}
   - component: {fileID: 720077954}
+  - component: {fileID: 720077958}
   m_Layer: 0
   m_Name: PachinkoPlatform (8)
   m_TagString: Untagged
@@ -2430,8 +2860,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &720077958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720077953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &776439873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,6 +2888,7 @@ GameObject:
   - component: {fileID: 776439876}
   - component: {fileID: 776439875}
   - component: {fileID: 776439874}
+  - component: {fileID: 776439878}
   m_Layer: 0
   m_Name: PachinkoPlatform (23)
   m_TagString: Untagged
@@ -2527,8 +2972,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &776439878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776439873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &784289648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2541,6 +3000,7 @@ GameObject:
   - component: {fileID: 784289651}
   - component: {fileID: 784289650}
   - component: {fileID: 784289649}
+  - component: {fileID: 784289653}
   m_Layer: 0
   m_Name: PachinkoPlatform (37)
   m_TagString: Untagged
@@ -2624,8 +3084,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &784289653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784289648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &833613650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,6 +3112,7 @@ GameObject:
   - component: {fileID: 833613653}
   - component: {fileID: 833613652}
   - component: {fileID: 833613651}
+  - component: {fileID: 833613655}
   m_Layer: 0
   m_Name: PachinkoPlatform (9)
   m_TagString: Untagged
@@ -2721,8 +3196,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833613655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833613650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &857139826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100162, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
@@ -2756,7 +3245,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.060318615, y: 0.0020788258, z: 0.07298299}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2837,7 +3326,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.060835626, y: 0.0020787662, z: -0.0725526}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2897,6 +3386,7 @@ GameObject:
   - component: {fileID: 880970263}
   - component: {fileID: 880970262}
   - component: {fileID: 880970261}
+  - component: {fileID: 880970265}
   m_Layer: 0
   m_Name: PachinkoPlatform (12)
   m_TagString: Untagged
@@ -2980,8 +3470,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &880970265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880970260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &943434251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,6 +3699,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 2093933331}
   _followSpeed: 2
+  _xAxis: 0
+  _yAxis: 0
+  _zAxis: -11
 --- !u!1 &976828457
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,6 +3714,7 @@ GameObject:
   - component: {fileID: 976828460}
   - component: {fileID: 976828459}
   - component: {fileID: 976828458}
+  - component: {fileID: 976828462}
   m_Layer: 0
   m_Name: PachinkoPlatform (17)
   m_TagString: Untagged
@@ -3290,8 +3798,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &976828462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976828457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1011290630
 GameObject:
   m_ObjectHideFlags: 0
@@ -3406,6 +3928,119 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1027639616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1027639620}
+  - component: {fileID: 1027639619}
+  - component: {fileID: 1027639618}
+  - component: {fileID: 1027639617}
+  - component: {fileID: 1027639621}
+  m_Layer: 0
+  m_Name: InvisibleFrontWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1027639617
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027639616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1027639618
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027639616}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1027639619
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027639616}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1027639620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027639616}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 10.18, z: -9.88}
+  m_LocalScale: {x: 2, y: 1, z: 2.1077485}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1027639621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027639616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec6e78084374e9448c9f95a5768e7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1064441327
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,6 +4053,7 @@ GameObject:
   - component: {fileID: 1064441330}
   - component: {fileID: 1064441329}
   - component: {fileID: 1064441328}
+  - component: {fileID: 1064441332}
   m_Layer: 0
   m_Name: PachinkoPlatform (16)
   m_TagString: Untagged
@@ -3501,8 +4137,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1064441332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064441327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1096598089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100058, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
@@ -3520,7 +4170,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.35179883, y: -0.008010952, z: 0.005146263}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3596,6 +4246,7 @@ GameObject:
   - component: {fileID: 1123027535}
   - component: {fileID: 1123027534}
   - component: {fileID: 1123027533}
+  - component: {fileID: 1123027537}
   m_Layer: 0
   m_Name: PachinkoPlatform (44)
   m_TagString: Untagged
@@ -3679,8 +4330,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123027537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123027532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1127104037
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,6 +4358,7 @@ GameObject:
   - component: {fileID: 1127104040}
   - component: {fileID: 1127104039}
   - component: {fileID: 1127104038}
+  - component: {fileID: 1127104042}
   m_Layer: 0
   m_Name: PachinkoPlatform (30)
   m_TagString: Untagged
@@ -3776,8 +4442,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1127104042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127104037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1129295278 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100022, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
@@ -3795,7 +4475,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.31812862, y: -0.040180735, z: 0.0000000061518177}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3870,6 +4550,7 @@ GameObject:
   - component: {fileID: 1143106671}
   - component: {fileID: 1143106670}
   - component: {fileID: 1143106669}
+  - component: {fileID: 1143106673}
   m_Layer: 0
   m_Name: PachinkoPlatform (34)
   m_TagString: Untagged
@@ -3953,8 +4634,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1143106673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143106668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1171047265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3967,6 +4662,7 @@ GameObject:
   - component: {fileID: 1171047268}
   - component: {fileID: 1171047267}
   - component: {fileID: 1171047266}
+  - component: {fileID: 1171047270}
   m_Layer: 0
   m_Name: PachinkoPlatform (22)
   m_TagString: Untagged
@@ -4050,8 +4746,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1171047270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171047265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1229948149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4064,6 +4774,7 @@ GameObject:
   - component: {fileID: 1229948152}
   - component: {fileID: 1229948151}
   - component: {fileID: 1229948150}
+  - component: {fileID: 1229948154}
   m_Layer: 0
   m_Name: PachinkoPlatform (2)
   m_TagString: Untagged
@@ -4147,8 +4858,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229948154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229948149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1233116746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4161,6 +4886,7 @@ GameObject:
   - component: {fileID: 1233116749}
   - component: {fileID: 1233116748}
   - component: {fileID: 1233116747}
+  - component: {fileID: 1233116751}
   m_Layer: 0
   m_Name: PachinkoPlatform (27)
   m_TagString: Untagged
@@ -4244,8 +4970,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1233116751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233116746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1278223271
 GameObject:
   m_ObjectHideFlags: 0
@@ -4258,6 +4998,7 @@ GameObject:
   - component: {fileID: 1278223274}
   - component: {fileID: 1278223273}
   - component: {fileID: 1278223272}
+  - component: {fileID: 1278223276}
   m_Layer: 0
   m_Name: PachinkoPlatform (41)
   m_TagString: Untagged
@@ -4341,8 +5082,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1278223276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278223271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1282851897 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100230, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
@@ -4376,7 +5131,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.20427594, y: -0.03755017, z: 0.09755184}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -4436,6 +5191,7 @@ GameObject:
   - component: {fileID: 1328106728}
   - component: {fileID: 1328106727}
   - component: {fileID: 1328106726}
+  - component: {fileID: 1328106730}
   m_Layer: 0
   m_Name: PachinkoPlatform (20)
   m_TagString: Untagged
@@ -4519,8 +5275,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1328106730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328106725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1439991007
 GameObject:
   m_ObjectHideFlags: 0
@@ -4533,6 +5303,7 @@ GameObject:
   - component: {fileID: 1439991010}
   - component: {fileID: 1439991009}
   - component: {fileID: 1439991008}
+  - component: {fileID: 1439991012}
   m_Layer: 0
   m_Name: PachinkoPlatform (46)
   m_TagString: Untagged
@@ -4616,8 +5387,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1439991012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439991007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1477881290 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
@@ -4648,6 +5433,7 @@ GameObject:
   - component: {fileID: 1541217217}
   - component: {fileID: 1541217216}
   - component: {fileID: 1541217215}
+  - component: {fileID: 1541217219}
   m_Layer: 0
   m_Name: PachinkoPlatform (28)
   m_TagString: Untagged
@@ -4731,8 +5517,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541217219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541217214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1556629663
 GameObject:
   m_ObjectHideFlags: 0
@@ -4745,6 +5545,7 @@ GameObject:
   - component: {fileID: 1556629666}
   - component: {fileID: 1556629665}
   - component: {fileID: 1556629664}
+  - component: {fileID: 1556629668}
   m_Layer: 0
   m_Name: PachinkoPlatform (35)
   m_TagString: Untagged
@@ -4828,8 +5629,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1556629668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556629663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1562688374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100214, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
@@ -4863,7 +5678,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.2042759, y: -0.03755017, z: -0.0975523}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -4923,6 +5738,7 @@ GameObject:
   - component: {fileID: 1583277308}
   - component: {fileID: 1583277307}
   - component: {fileID: 1583277306}
+  - component: {fileID: 1583277310}
   m_Layer: 0
   m_Name: PachinkoPlatform (45)
   m_TagString: Untagged
@@ -5006,8 +5822,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1583277310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583277305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1639718342
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,13 +5964,14 @@ GameObject:
   - component: {fileID: 1652481788}
   - component: {fileID: 1652481787}
   - component: {fileID: 1652481786}
+  - component: {fileID: 1652481790}
   m_Layer: 0
   m_Name: PachinkoPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1652481786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5217,8 +6048,24 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1652481790
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652481785}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1675584951
 GameObject:
   m_ObjectHideFlags: 0
@@ -5231,6 +6078,7 @@ GameObject:
   - component: {fileID: 1675584954}
   - component: {fileID: 1675584953}
   - component: {fileID: 1675584952}
+  - component: {fileID: 1675584956}
   m_Layer: 0
   m_Name: PachinkoPlatform (38)
   m_TagString: Untagged
@@ -5314,8 +6162,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1675584956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675584951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1001 &1681814857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5326,6 +6188,10 @@ PrefabInstance:
     - target: {fileID: 100096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
       propertyPath: m_Name
       value: unitychan
+      objectReference: {fileID: 0}
+    - target: {fileID: 100096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
+      propertyPath: m_TagString
+      value: Ragdoll
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
       propertyPath: m_RootOrder
@@ -5401,6 +6267,7 @@ GameObject:
   - component: {fileID: 1682902972}
   - component: {fileID: 1682902971}
   - component: {fileID: 1682902970}
+  - component: {fileID: 1682902974}
   m_Layer: 0
   m_Name: PachinkoPlatform (48)
   m_TagString: Untagged
@@ -5484,8 +6351,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682902974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682902969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1700817630
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,6 +6379,7 @@ GameObject:
   - component: {fileID: 1700817633}
   - component: {fileID: 1700817632}
   - component: {fileID: 1700817631}
+  - component: {fileID: 1700817635}
   m_Layer: 0
   m_Name: PachinkoPlatform (42)
   m_TagString: Untagged
@@ -5581,8 +6463,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700817635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700817630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1704084031
 GameObject:
   m_ObjectHideFlags: 0
@@ -5709,6 +6605,7 @@ GameObject:
   - component: {fileID: 1706641945}
   - component: {fileID: 1706641944}
   - component: {fileID: 1706641943}
+  - component: {fileID: 1706641947}
   m_Layer: 0
   m_Name: PachinkoPlatform (19)
   m_TagString: Untagged
@@ -5792,8 +6689,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1706641947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706641942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1714441782
 GameObject:
   m_ObjectHideFlags: 0
@@ -5806,6 +6717,7 @@ GameObject:
   - component: {fileID: 1714441785}
   - component: {fileID: 1714441784}
   - component: {fileID: 1714441783}
+  - component: {fileID: 1714441787}
   m_Layer: 0
   m_Name: PachinkoPlatform (10)
   m_TagString: Untagged
@@ -5889,8 +6801,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714441787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714441782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1761324206
 GameObject:
   m_ObjectHideFlags: 0
@@ -5903,6 +6829,7 @@ GameObject:
   - component: {fileID: 1761324209}
   - component: {fileID: 1761324208}
   - component: {fileID: 1761324207}
+  - component: {fileID: 1761324211}
   m_Layer: 0
   m_Name: PachinkoPlatform (14)
   m_TagString: Untagged
@@ -5986,8 +6913,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1761324211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761324206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &1941263223 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100186, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
@@ -6005,7 +6946,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.23377877, y: 0.000017430264, z: -0.0000137087745}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -6081,6 +7022,7 @@ GameObject:
   - component: {fileID: 1999757520}
   - component: {fileID: 1999757519}
   - component: {fileID: 1999757518}
+  - component: {fileID: 1999757522}
   m_Layer: 0
   m_Name: PachinkoPlatform (18)
   m_TagString: Untagged
@@ -6164,8 +7106,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1999757522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999757517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &2020912235 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100220, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
@@ -6183,7 +7139,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.1135724, y: 0.017735967, z: -0.00040346407}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -6246,6 +7202,157 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.20427671, y: 0.18910618, z: 0.19510409}
   m_Center: {x: -0.102138296, y: -0.018775083, z: -0.000000230968}
+--- !u!1 &2037268837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2037268843}
+  - component: {fileID: 2037268842}
+  - component: {fileID: 2037268841}
+  - component: {fileID: 2037268840}
+  - component: {fileID: 2037268839}
+  - component: {fileID: 2037268838}
+  m_Layer: 0
+  m_Name: HingeBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!59 &2037268838
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037268837}
+  m_ConnectedBody: {fileID: 1652481790}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0.5, z: -0.5}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 1
+  m_Motor:
+    targetVelocity: 150
+    force: 150
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &2037268839
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037268837}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2037268840
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037268837}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2037268841
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037268837}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2037268842
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037268837}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2037268843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037268837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.555, y: 17.981, z: 1.584}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2063712466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6258,6 +7365,7 @@ GameObject:
   - component: {fileID: 2063712469}
   - component: {fileID: 2063712468}
   - component: {fileID: 2063712467}
+  - component: {fileID: 2063712471}
   m_Layer: 0
   m_Name: PachinkoPlatform (6)
   m_TagString: Untagged
@@ -6341,8 +7449,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2063712471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063712466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &2073169494
 GameObject:
   m_ObjectHideFlags: 0
@@ -6355,6 +7477,7 @@ GameObject:
   - component: {fileID: 2073169497}
   - component: {fileID: 2073169496}
   - component: {fileID: 2073169495}
+  - component: {fileID: 2073169499}
   m_Layer: 0
   m_Name: PachinkoPlatform (26)
   m_TagString: Untagged
@@ -6438,8 +7561,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2073169499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073169494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}
 --- !u!1 &2081072311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100042, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
@@ -6457,7 +7594,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.3513646, y: -0.008011266, z: -0.018233733}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -6572,6 +7709,7 @@ GameObject:
   - component: {fileID: 2107560954}
   - component: {fileID: 2107560953}
   - component: {fileID: 2107560952}
+  - component: {fileID: 2107560956}
   m_Layer: 0
   m_Name: PachinkoPlatform (49)
   m_TagString: Untagged
@@ -6655,5 +7793,19 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2107560956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107560951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d4d897d2954643aae93059e4ee365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+  _ragdollHip: {fileID: 2093933329}

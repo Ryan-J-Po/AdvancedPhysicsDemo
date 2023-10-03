@@ -7,11 +7,16 @@ public class LaunchPadBehaviour : MonoBehaviour
     [SerializeField]
     private int _speed;
 
+    [SerializeField]
+    private Rigidbody _ragdollHip;
+
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Ragdoll"))
-        {
-            other.gameObject.GetComponent<RigidBody>().AddForce(_speed * Vector3.up, ForceMode.Impulse);
-        }
+        
+        
+            Debug.Log("A collision has happened.");
+            //other.gameObject.GetComponent<Rigidbody>().AddForce(_speed * Vector3.up, ForceMode.Impulse);
+            _ragdollHip.AddForce(_speed * Vector3.up, ForceMode.Impulse);
+        
     }
 }

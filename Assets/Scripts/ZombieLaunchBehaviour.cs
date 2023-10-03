@@ -62,6 +62,7 @@ public class ZombieLaunchBehaviour : MonoBehaviour
             _animator.enabled = false;
             SetRagdollEnabled(true);
             AddForceToRigidBodies(zombieToMouse * _forceScale);
+            _forceAdded = false;
         }
 
     }
