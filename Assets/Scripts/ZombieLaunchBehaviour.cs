@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ZombieLaunchBehaviour : MonoBehaviour
 {
@@ -61,6 +62,16 @@ public class ZombieLaunchBehaviour : MonoBehaviour
             SetRagdollEnabled(true);
             AddForceToRigidBodies(zombieToMouse * _forceScale);
             _forceAdded = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);   
         }
 
     }
