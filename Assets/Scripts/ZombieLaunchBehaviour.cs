@@ -52,8 +52,6 @@ public class ZombieLaunchBehaviour : MonoBehaviour
             _mouseWorldPosition = hitData.point;
         }
 
-        Debug.DrawRay(transform.position, _mouseWorldPosition);
-
 
         if (Input.GetMouseButtonDown(0))
         {

@@ -12,11 +12,8 @@ public class LaunchPadBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        
-        
             Debug.Log("A collision has happened.");
             //other.gameObject.GetComponent<Rigidbody>().AddForce(_speed * Vector3.up, ForceMode.Impulse);
-            _ragdollHip.AddForce(_speed * Vector3.up, ForceMode.Impulse);
-        
+            _ragdollHip.AddForce(_speed * Vector3.up, ForceMode.Impulse);  
     }
 }
